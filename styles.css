@@ -123,17 +123,6 @@ a {
     position: relative;
 }
 
-.hero__avatar {
-    width: clamp(120px, 22vw, 160px);
-    height: clamp(120px, 22vw, 160px);
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    margin-bottom: 1.5rem;
-    border: 3px solid var(--accent);
-    box-shadow: 0 8px 30px color-mix(in srgb, var(--accent) 30%, transparent);
-}
-
 .hero__eyebrow {
     color: var(--accent);
     font-family: "Fira Code", monospace;
@@ -330,6 +319,32 @@ a {
 }
 
 /* About */
+.about {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+}
+
+.about__photo {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 18px;
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    box-shadow: 0 12px 40px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+@media (max-width: 640px) {
+    .about {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: left;
+    }
+}
+
 .about__list {
     list-style: none;
     display: grid;
