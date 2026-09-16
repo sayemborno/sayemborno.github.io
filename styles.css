@@ -123,6 +123,17 @@ a {
     position: relative;
 }
 
+.hero__avatar {
+    width: clamp(120px, 22vw, 160px);
+    height: clamp(120px, 22vw, 160px);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--accent);
+    box-shadow: 0 8px 30px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
 .hero__eyebrow {
     color: var(--accent);
     font-family: "Fira Code", monospace;
